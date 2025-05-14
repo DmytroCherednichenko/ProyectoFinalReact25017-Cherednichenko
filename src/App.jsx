@@ -1,11 +1,12 @@
-import NavbarComponent from './components/Navbar'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import NavbarComponent from './components/navbar/Navbar'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Shop from './pages/ShopMain';
+import Footer from './components/footer/Footer';
 import ShopMain from './pages/ShopMain';
 import Login from './pages/Login';
 import Cart from './pages/Cart';
 import ShopCategory from './pages/ShopCategory';
+
 
 
 
@@ -21,8 +22,9 @@ function App() {
           <Route path='/dama' element={<ShopCategory category="dama"/>} />
           <Route path='/nino' element={<ShopCategory category="nino"/>} />
           <Route path='/login' element={<Login />} />
-          <Route path='/cart' element={<Cart />} />
+          <Route path='/carrito' element={<Cart />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </div>
   )

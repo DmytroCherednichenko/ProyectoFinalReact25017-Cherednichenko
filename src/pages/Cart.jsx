@@ -1,7 +1,7 @@
 const Cart = () => {
-    retrun (
+    return (
         <div>
-            
+            <h1>I am a carrito</h1>
         </div>
     )
 }
