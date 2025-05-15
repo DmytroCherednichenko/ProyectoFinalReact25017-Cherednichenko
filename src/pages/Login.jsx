@@ -26,7 +26,7 @@ const Login = () => {
                     <Form.Control className="form-field" type="password" placeholder="Password" />
                 </Form.Group>
                 <Button variant="primary" onClick={()=>handleLogin()}>
-                    Submit
+                    Login
                 </Button>
             </Form>
         </Container>

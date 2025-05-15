@@ -19,7 +19,7 @@ const Popular = () => {
 
     return (
         <Container className="popular">
-            <h1>Popular Products</h1>
+            <h1>Productos Populares</h1>
             <Container className='popular-flex-wrapper'>
                 {
                     products.map((item, index) => <Item className="popular-item" key={index} id={item.id} name={item.title} image={item.images[0]} price={item.price}></Item>)

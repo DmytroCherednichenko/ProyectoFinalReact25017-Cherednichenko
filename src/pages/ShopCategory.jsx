@@ -21,11 +21,11 @@ const ShopCategory = (props) => {
     const renderHeading = (category) => {
         switch (category) {
             case "3":
-                return <h1>Products for women!</h1>;
+                return <h1>Compra nuestros muebles!</h1>;
             case "4":
-                return <h1>Products for kids!</h1>;
+                return <h1>Compra nuestros zapatos!</h1>;
             case "5":
-                return <h1>Products for men!</h1>;
+                return <h1>Estillo de vida!</h1>;
             default:
                 return <h1>Products for you!</h1>;
         }
