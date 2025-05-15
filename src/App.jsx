@@ -21,9 +21,9 @@ function App() {
         <NavbarComponent />
         <Routes>
           <Route path='/' element={<ShopMain />} />
-          <Route path='/caballero' element={<ShopCategory category="caballero" />} />
-          <Route path='/dama' element={<ShopCategory category="dama"/>} />
-          <Route path='/nino' element={<ShopCategory category="nino"/>} />
+          <Route path='/caballero' element={<ShopCategory category="2" />} />
+          <Route path='/dama' element={<ShopCategory category="3"/>} />
+          <Route path='/nino' element={<ShopCategory category="4"/>} />
           <Route path='/product' element={<Product />}>
             <Route path=':productId' element={<Product />} />
           </Route>

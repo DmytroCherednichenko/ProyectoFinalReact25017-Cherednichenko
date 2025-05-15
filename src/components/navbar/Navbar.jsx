@@ -20,9 +20,9 @@ const NavbarComponent = () => {
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
                             <Nav.Link as={Link} to="/">Home</Nav.Link>
-                            <Nav.Link as={Link} to="/men">Men</Nav.Link>
-                            <Nav.Link as={Link} to="/women">Women</Nav.Link>
-                            <Nav.Link as={Link} to="/kids">Kids</Nav.Link>
+                            <Nav.Link as={Link} to="/caballero">Men</Nav.Link>
+                            <Nav.Link as={Link} to="/dama">Women</Nav.Link>
+                            <Nav.Link as={Link} to="/nino">Kids</Nav.Link>
                         </Nav>
                         <Nav>
                             

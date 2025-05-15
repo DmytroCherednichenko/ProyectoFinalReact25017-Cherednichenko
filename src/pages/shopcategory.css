@@ -1,0 +1,14 @@
+.shop-category {
+    min-height: 100vh;
+}
+
+.category-products-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-evenly;
+}
+
+.shop-category h1 {
+    margin: 30px 0px;
+}
