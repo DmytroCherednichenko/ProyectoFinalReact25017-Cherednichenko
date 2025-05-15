@@ -8,6 +8,8 @@ import ShopMain from './pages/ShopMain';
 import Login from './pages/Login';
 import Cart from './pages/Cart';
 import ShopCategory from './pages/ShopCategory';
+import Product from './pages/Product';
+import Popular from './components/popular/popular';
 
 
 
@@ -19,12 +21,16 @@ function App() {
       <BrowserRouter>
         <NavbarComponent />
         <Routes>
-          <Route path='/' element={<ShopMain />} />
+          <Route path='/' element={<Popular />} />
           <Route path='/caballero' element={<ShopCategory category="caballero" />} />
           <Route path='/dama' element={<ShopCategory category="dama"/>} />
           <Route path='/nino' element={<ShopCategory category="nino"/>} />
+          <Route path='/product' element={<Product />}>
+            <Route path=':productId' element={<Product />} />
+          </Route>
           <Route path='/login' element={<Login />} />
           <Route path='/carrito' element={<Cart />} />
+          
         </Routes>
         <Footer />
       </BrowserRouter>

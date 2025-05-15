@@ -3,10 +3,10 @@ import "./item.css"
 const Item = (props) => {
     return (
         <div className="item">
-            <img src={props.image} alt="" />
+            <img src={props.image} alt={`An image of ${props.title}`} />
             <p>{props.name}</p>
             <div className="item-price">
-                {price.price}
+                {props.price}
             </div>
         </div>
     )

@@ -8,27 +8,27 @@ const Footer = () => {
                 <div className="social-media-container">
                     <div className="social-media-item">
                         <a href="/">
-                            <i class="bi bi-instagram"></i>
+                            <i className="bi bi-instagram"></i>
                         </a>
                     </div>
                     <div className="social-media-item">
                         <a href="/">
-                            <i class="bi bi-youtube"></i>
+                            <i className="bi bi-youtube"></i>
                         </a>
                     </div>
                     <div className="social-media-item">
                         <a href="">
-                            <i class="bi bi-twitter-x"></i>
+                            <i className="bi bi-twitter-x"></i>
                         </a>
                     </div>
                     <div className="social-media-item">
                         <a href="">
-                            <i class="bi bi-github"></i>
+                            <i className="bi bi-github"></i>
                         </a>
                     </div>
                     <div className="social-media-item">
                         <a href="">
-                            <i class="bi bi-facebook"></i>
+                            <i className="bi bi-facebook"></i>
                         </a>
                     </div>
                 </div>

@@ -1,6 +1,6 @@
 import { Container, ListGroup }  from "react-bootstrap";
 
-const Productos = () => {
+const Products = () => {
     return (
         <>
             <h1>Available Products</h1>
@@ -12,3 +12,5 @@ const Productos = () => {
         </>
     )
 }
+
+export default Products;
