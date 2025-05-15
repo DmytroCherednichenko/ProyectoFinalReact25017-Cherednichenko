@@ -11,7 +11,8 @@
 }
 
 .footer-second-row {
-    background-color: #6b757d;
+    background-color: #343a40;
+    color: #f7f9fa;
     height: 60px;
     display: flex;
     flex-direction: column;

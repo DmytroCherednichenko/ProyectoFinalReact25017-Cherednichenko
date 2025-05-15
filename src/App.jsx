@@ -9,7 +9,6 @@ import Login from './pages/Login';
 import Cart from './pages/Cart';
 import ShopCategory from './pages/ShopCategory';
 import Product from './pages/Product';
-import Popular from './components/popular/popular';
 
 
 
@@ -21,7 +20,7 @@ function App() {
       <BrowserRouter>
         <NavbarComponent />
         <Routes>
-          <Route path='/' element={<Popular />} />
+          <Route path='/' element={<ShopMain />} />
           <Route path='/caballero' element={<ShopCategory category="caballero" />} />
           <Route path='/dama' element={<ShopCategory category="dama"/>} />
           <Route path='/nino' element={<ShopCategory category="nino"/>} />

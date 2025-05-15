@@ -1,13 +1,9 @@
-import { getPopularProducts } from "../assets/ListOfProducts";
-
-const listOfProducts = getPopularProducts();
+import Popular from "../components/popular/popular";
 
 const ShopMain = () => {
-    console.log(listOfProducts);
     return (
         <div>
-            {
-            }
+            <Popular />
         </div>
     )
 }

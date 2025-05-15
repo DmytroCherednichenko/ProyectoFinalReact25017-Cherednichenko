@@ -8,6 +8,7 @@ const Item = (props) => {
             <div className="item-price">
                 {props.price}
             </div>
+            
         </div>
     )
 }
