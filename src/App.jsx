@@ -21,7 +21,7 @@ function App() {
         <NavbarComponent />
         <Routes>
           <Route path='/' element={<ShopMain />} />
-          <Route path='/caballero' element={<ShopCategory category="2" />} />
+          <Route path='/caballero' element={<ShopCategory category="5" />} />
           <Route path='/dama' element={<ShopCategory category="3"/>} />
           <Route path='/nino' element={<ShopCategory category="4"/>} />
           <Route path='/product' element={<Product />}>

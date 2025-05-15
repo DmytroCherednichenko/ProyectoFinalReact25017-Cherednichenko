@@ -1,4 +1,3 @@
-import React from 'react'
 import "./popular.css"
 import { getLimitedProducts } from "../../assets/ListOfProducts"
 import { useState, useEffect } from 'react'
@@ -6,7 +5,7 @@ import Item from "../item/Item"
 import { Container } from 'react-bootstrap'
 
 const Popular = () => {
-    const [ products, setProducts ] = useState([]);
+    const [products, setProducts] = useState([]);
 
     useEffect(() => {
         async function loadProducts() {
