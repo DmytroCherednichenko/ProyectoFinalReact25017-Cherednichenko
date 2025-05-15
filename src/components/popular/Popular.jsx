@@ -1,17 +1,17 @@
 import React from 'react'
 import "./popular.css"
-import { getPopularProducts } from "../../assets/ListOfProducts"
+import { getLimitedProducts } from "../../assets/ListOfProducts"
 import { useState, useEffect } from 'react'
 import Item from "../item/Item"
-import { Container, Row, Col } from 'react-bootstrap'
+import { Container } from 'react-bootstrap'
 
 const Popular = () => {
     const [ products, setProducts ] = useState([]);
 
     useEffect(() => {
         async function loadProducts() {
-            const data = await getPopularProducts();
-            setProducts(data.products);
+            const data = await getLimitedProducts(20);
+            setProducts(data);
         }
         loadProducts();
     }, []);
@@ -20,12 +20,12 @@ const Popular = () => {
 
     return (
         <Container className="popular">
-            <h1>Popular in Women</h1>
-            <Row>
+            <h1>Popular Products</h1>
+            <Container className='popular-flex-wrapper'>
                 {
-                    products.map((item, index) => <Col className="popular-item"><Item key={index} id={item.id} name={item.title} image={item.image} price={item.price}></Item></Col>)
+                    products.map((item, index) => <Item className="popular-item" key={index} id={item.id} name={item.title} image={item.images[0]} price={item.price}></Item>)
                 }
-            </Row>
+            </Container>
         </Container>
     )
 }

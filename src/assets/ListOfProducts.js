@@ -1,4 +1,4 @@
-const API_BASE_URL = "https://fakestoreapi.in/api/products";
+const API_BASE_URL = "https://api.escuelajs.co/api/v1/products";
 
 export async function getProducts() {
     try {
@@ -14,9 +14,9 @@ export async function getProducts() {
     }
 }
 
-export async function getPopularProducts() {
+export async function getLimitedProducts(num="8") {
     try {
-        const response = await fetch(`${API_BASE_URL}?limit=4`);
+        const response = await fetch(`${API_BASE_URL}?offset=1&limit=${num}`);
         if (!response.ok) {
             throw new Error("Failed to fetch Popular Products");
         }
