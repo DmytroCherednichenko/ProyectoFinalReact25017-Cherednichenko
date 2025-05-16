@@ -28,15 +28,11 @@ function App() {
           <Route path='/zapatos' element={<ShopCategory category="4" />} />
           <Route path='/login' element={<Login />} />
           <Route path='/carrito' element={<Cart />} />
-          <Route path='/profile/id' element={
-            <RutaProtegida>
-              <Profile />
-            </RutaProtegida>
+          <Route path='/profile/:id' element={
+            <RutaProtegida><Profile /></RutaProtegida>
           } />
             <Route path='/admin' element={
-              <RutaProtegida>
-                <Administration />
-              </RutaProtegida>
+              <RutaProtegida><Administration /></RutaProtegida>
             }>
             </Route>
         </Routes>
