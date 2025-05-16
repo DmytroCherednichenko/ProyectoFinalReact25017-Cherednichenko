@@ -6,6 +6,7 @@ import CartItem from "../../components/cart-item/CartItem"
 
 const Cart = (props) => {
     const [products, setProducts] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         async function loadProducts() {
@@ -13,14 +14,19 @@ const Cart = (props) => {
                 props.cartItems.map(id => getSingleProduct(id))
             );
             setProducts(results);
+            setLoading(false);
         }
 
         if (props.cartItems.length > 0) {
             loadProducts();
         } else {
             setProducts([]);
+            setLoading(false);
         }
     }, [props.cartItems]);
+
+    if (loading) return <div className="cart-page-loading"><span class="loader"></span></div>;
+
 
     return (
         <Container className="cart-page">

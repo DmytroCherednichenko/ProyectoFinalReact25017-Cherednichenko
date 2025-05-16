@@ -6,14 +6,19 @@ import { Container } from 'react-bootstrap'
 
 const Popular = (props) => {
     const [products, setProducts] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         async function loadProducts() {
-            const data = await getLimitedProducts(20);
+            const data = await getLimitedProducts(50);
             setProducts(data);
+            setLoading(false);
         }
         loadProducts();
     }, []);
+
+    if (loading) return <div className="popular-loading"><span className="loader"></span></div>;
+
 
     return (
         <Container className="popular">

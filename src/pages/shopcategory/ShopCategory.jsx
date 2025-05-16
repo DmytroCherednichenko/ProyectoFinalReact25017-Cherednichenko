@@ -6,14 +6,19 @@ import "./shopcategory.css"
 
 const ShopCategory = (props) => {
     const [products, setProducts] = useState([]);
+    const [loading, setLoading] = useState(true);
+
 
     useEffect(() => {
         async function loadProducts() {
             const data = await getCategoryProducts(props.category);
             setProducts(data);
+            setLoading(false);
         }
         loadProducts();
     }, [props.category]);
+
+    if (loading) return <div className="shop-category-loading"><span class="loader"></span></div>;
 
 
     const renderHeading = (category) => {
