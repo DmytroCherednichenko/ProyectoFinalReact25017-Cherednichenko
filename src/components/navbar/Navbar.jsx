@@ -19,14 +19,24 @@ const NavbarComponent = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
-                            <Nav.Link as={Link} to="/">Home</Nav.Link>
+                            <Nav.Link as={Link} to="/">Inicio</Nav.Link>
                             <Nav.Link as={Link} to="/lifestyle">Lifestyle</Nav.Link>
                             <Nav.Link as={Link} to="/muebles">Muebles</Nav.Link>
                             <Nav.Link as={Link} to="/zapatos">Zapatos</Nav.Link>
+                            {
+                                isAuth && (
+                                    <>
+                                        <Nav.Link as={Link} to="/profile/user123">Mi Cuenta</Nav.Link>
+                                        <Nav.Link as={Link} to="/admin">Administración</Nav.Link>
+                                    </>
+                                )
+                            }
                         </Nav>
                         <Nav>
-                            
-                            <Nav.Link as={Link} to="/login">Login</Nav.Link>
+                            {
+                                !isAuth ? (<Nav.Link as={Link} to="/login">Login</Nav.Link>) 
+                                : (<Button variant="secondary" onClick={()=>cerrarSession()}>Logout</Button>)
+                            }
                             <Nav.Link as={Link} to="/cart"><i className="bi bi-cart"></i></Nav.Link>
                         </Nav>
                     </Navbar.Collapse>

@@ -1,7 +1,7 @@
 import { Container } from 'react-bootstrap';
 
 
-export default function Administracion() {
+export default function Administration() {
     return (
         <Container className = "mt-4" >
             <h2>Panel de Administración</h2>

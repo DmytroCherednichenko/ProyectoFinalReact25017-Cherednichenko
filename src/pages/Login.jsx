@@ -12,6 +12,7 @@ const Login = () => {
 
     return (
         <Container className="login">
+            <h2>Iniciar sesión</h2>
             <Form>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
