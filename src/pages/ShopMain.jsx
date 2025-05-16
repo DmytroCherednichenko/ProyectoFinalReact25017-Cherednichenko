@@ -1,9 +1,9 @@
 import Popular from "../components/popular/popular";
 
-const ShopMain = () => {
+const ShopMain = (props) => {
     return (
         <div>
-            <Popular />
+            <Popular addToCart={props.addToCart}/>
         </div>
     )
 }

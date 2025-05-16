@@ -42,3 +42,18 @@ export async function getCategoryProducts(id="1") {
         return [];
     }
 }
+
+export async function getSingleProduct(id="1") {
+    try {
+        const response = await fetch(`${API_BASE_URL}/products/${id}`);
+        if (!response.ok) {
+            throw new Error("Failed to fetch specified category");
+        }
+        const data = await response.json();
+        return data;
+
+    } catch (e) {
+        console.error(e);
+        return [];
+    }
+}

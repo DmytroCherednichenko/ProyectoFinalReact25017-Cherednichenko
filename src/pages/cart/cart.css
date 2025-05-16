@@ -1,0 +1,15 @@
+.cart-page {
+    min-height: 100vh;
+
+}
+
+.cart-page h1 {
+    margin: 30px 0px;
+}
+
+.cart-flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-evenly;
+}
