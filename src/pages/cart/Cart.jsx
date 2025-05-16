@@ -2,7 +2,7 @@ import { Container } from "react-bootstrap"
 import "./cart.css"
 import { useState, useEffect } from "react"
 import { getSingleProduct } from "../../assets/ListOfProducts"
-import Item from "../../components/item/Item"
+import CartItem from "../../components/cart-item/CartItem"
 
 const Cart = (props) => {
     const [products, setProducts] = useState([]);
@@ -17,6 +17,8 @@ const Cart = (props) => {
 
         if (props.cartItems.length > 0) {
             loadProducts();
+        } else {
+            setProducts([]);
         }
     }, [props.cartItems]);
 
@@ -25,7 +27,7 @@ const Cart = (props) => {
             <h1>Su Carrito</h1>
             <Container className="cart-flex-wrap">
                 {
-                    products.map((item, index) => <Item className="cart-item" key={index} id={item.id} name={item.title} image={item.images[0]} price={item.price}></Item>)
+                    products.map((item, index) => <CartItem removeFromCart={props.removeFromCart} className="cart-item" key={index} id={item.id} name={item.title} image={item.images[0]} price={item.price}></CartItem>)
                 }
             </Container>
         </Container>

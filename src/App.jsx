@@ -23,6 +23,12 @@ function App() {
     setCartItems([...cartItems, product]);
   };
 
+  const removeFromCart = (idToRemove) => {
+      setCartItems(prevCartItems =>
+          prevCartItems.filter(item => item !== idToRemove)
+      );
+  };
+
   return (
     <div>
       <BrowserRouter>
@@ -33,7 +39,7 @@ function App() {
           <Route path='/muebles' element={<ShopCategory addToCart={addToCart} category="3" />} />
           <Route path='/zapatos' element={<ShopCategory addToCart={addToCart} category="4" />} />
           <Route path='/login' element={<Login />} />
-          <Route path='/cart' element={<Cart cartItems={cartItems}/>} />
+          <Route path='/cart' element={<Cart cartItems={cartItems} removeFromCart={removeFromCart}/>} />
           <Route path='/profile/:id' element={
             <RutaProtegida><Profile /></RutaProtegida>
           } />

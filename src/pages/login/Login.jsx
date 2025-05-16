@@ -7,7 +7,7 @@ const Login = () => {
 
     const handleLogin = () => {
         localStorage.setItem("auth", "true");
-        navigate("/profile/user123");
+        navigate("/profile/lisa_simpson");
     };
 
     return (

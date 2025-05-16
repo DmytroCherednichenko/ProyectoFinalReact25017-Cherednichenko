@@ -26,7 +26,7 @@ const NavbarComponent = () => {
                             {
                                 isAuth && (
                                     <>
-                                        <Nav.Link as={Link} to="/profile/user123">Mi Cuenta</Nav.Link>
+                                        <Nav.Link as={Link} to="/profile/lisa_simpson">Mi Cuenta</Nav.Link>
                                         <Nav.Link as={Link} to="/admin">Administración</Nav.Link>
                                     </>
                                 )
